@@ -1,1 +1,98 @@
-<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>راهنمای بررسی تمساح</title><style>@font-face{font-family:f;src:url('assets/foroshyar.woff2')}*{box-sizing:border-box}body{font:15px/2 f,Tahoma,sans-serif;background:#f7f8fa;margin:0;color:#243347}.wrap{max-width:1060px;margin:50px auto;padding:0 20px}h1{font-size:30px;margin-bottom:0}p{color:#78889b}h2{font-size:18px;margin-top:36px}section{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}a{display:block;text-decoration:none;color:#253347;background:#fff;border:1px solid #e7edf2;padding:16px;border-radius:12px}a:hover{border-color:#73af95;color:#18765a}small{display:block;color:#8d9bad}@media(max-width:720px){section{grid-template-columns:1fr}}</style><link rel="stylesheet" href="brand.css"><link rel="icon" href="favicon.png" type="image/png"><link rel="stylesheet" href="square-cards-v27.css"><link rel="stylesheet" href="v29-ui.css"><link href="style.css" rel="stylesheet"/><link href="v30-static.css" rel="stylesheet"/></head><body><div class="wrap"><h1>تمساح — راهنمای بررسی نسخه بازسازی‌شده</h1><p>این نسخه دمو است. اطلاعات در مرورگر ذخیره می‌شوند و تمام فرم‌ها و عملیات حساس از مودال اختصاصی استفاده می‌کنند.</p><h2>فروشگاه و خرید</h2><section><a href="index.html">صفحه اصلی<small>جستجو، محصولات و دسته‌بندی</small></a><a href="cart.html">سبد خرید<small>دو محصول نمونه، خدمات و تخفیف</small></a><a href="checkout.html">تسویه‌حساب<small>فرم و رسید نمایشی</small></a><a href="product.html?id=1">صفحه محصول<small>قیمت، مشخصات و افزودن به سبد</small></a></section><h2>سامانه خریدار</h2><section><a href="account.html">داشبورد خریدار</a><a href="downloads.html">دانلودهای من</a><a href="orders.html">مالی و سفارش‌ها</a><a href="customer-club.html">باشگاه مشتریان</a><a href="tickets.html">تیکت‌ها</a><a href="ticket-new.html">ثبت تیکت</a><a href="settings.html">ویرایش پروفایل</a><a href="announcements.html">اعلانات</a></section><h2>سامانه توسعه‌دهنده</h2><section><a href="vendor.html">داشبورد فروشنده</a><a href="vendor-products.html">مدیریت محصولات</a><a href="vendor-new-product.html">ایجاد محصول</a><a href="vendor-edit-product.html?id=1">ویرایش محصول</a><a href="vendor-finance.html">گزارش مالی</a><a href="vendor-support-report.html">گزارش پشتیبانی</a><a href="vendor-tickets.html">تیکت‌های فروشنده</a><a href="vendor-ready-replies.html">پاسخ‌های آماده</a><a href="vendor-questions.html">پرسش‌های کاربران</a><a href="vendor-store-settings.html">تنظیمات فروشگاه</a></section><p style="margin-top:40px">TEMSAH.ME · Demo only</p></div><section style="direction:rtl;max-width:850px;margin:25px auto;background:#edf8f1;border-radius:14px;padding:22px;font-family:inherit"><h2>مسیر درخواست فروشندگی جدید</h2><p>فرایند پنج مرحله‌ای، کد تأیید آزمایشی ۱۲۳۴۵۶، مدارک هویتی، حساب بانکی، فروشگاه و وضعیت بررسی</p><a href="seller-application.html" style="display:inline-block;background:#197651;color:white;padding:12px 22px;border-radius:9px;text-decoration:none">شروع درخواست فروشندگی</a> <a href="seller-application-status.html" style="display:inline-block;background:white;color:#197651;padding:12px 22px;border-radius:9px;text-decoration:none">آزمایش صفحه وضعیت</a></section></body></html>
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>راهنمای بررسی تمساح</title>
+<link rel="icon" href="favicon.png" type="image/png"/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="brand.css"/>
+<link rel="stylesheet" href="square-cards-v27.css"/>
+<link rel="stylesheet" href="v29-ui.css"/>
+<link rel="stylesheet" href="v30-static.css"/>
+<script defer src="interactions.js"></script>
+<style>
+.guide-wrap{max-width:1080px;margin:40px auto 64px;padding:0 20px}
+.guide-head{margin-bottom:28px}
+.guide-head h1{font-size:28px;margin:0 0 8px}
+.guide-head p{color:#6f7e8e;margin:0}
+.guide-sec-title{font-size:17px;margin:30px 0 12px;color:#233346}
+.guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.guide-card{display:block;text-decoration:none;color:#253347;background:#fff;border:1px solid #e7edf2;padding:16px;border-radius:12px;transition:border-color .16s,transform .16s}
+.guide-card:hover{border-color:#73af95;color:#18765a;transform:translateY(-2px)}
+.guide-card small{display:block;color:#8493a3;margin-top:4px;font-size:11px}
+.guide-onboard{margin-top:34px;background:#edf8f1;border:1px solid #d2eadc;border-radius:14px;padding:22px}
+.guide-onboard h2{font-size:18px;margin:0 0 8px}
+.guide-onboard p{color:#506a5c;margin:0 0 16px;font-size:13px}
+.guide-onboard-actions{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:760px){.guide-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="guide-wrap">
+  <div class="guide-head">
+    <span class="eyebrow">مرور سریع صفحات پروژه</span>
+    <h1>تمساح — راهنمای بررسی نسخه کامل HTML</h1>
+    <p>تمام صفحات فروشگاه، سامانه خریدار، پنل فروشنده و فرم‌های تعاملی در این دمو در دسترس هستند.</p>
+  </div>
+
+  <h2 class="guide-sec-title">فروشگاه و خرید</h2>
+  <section class="guide-grid">
+    <a class="guide-card" href="index.html">صفحه اصلی<small>اسلایدرها، استوری‌ها، جستجو و دسته‌بندی</small></a>
+    <a class="guide-card" href="catalog.html">فروشگاه و فیلترها<small>فیلتر دسته‌بندی، تخفیف، مرتب‌سازی و جستجو</small></a>
+    <a class="guide-card" href="product-1.html">صفحه محصول<small>گالری مربع، تب‌ها، نشان‌ها، دیدگاه و افزودن به سبد</small></a>
+    <a class="guide-card" href="cart.html">سبد خرید<small>اقلام، سرویس‌های تکمیلی و کد تخفیف TEMSAH10</small></a>
+    <a class="guide-card" href="checkout.html">تسویه‌حساب<small>خلاصه هماهنگ با سبد خرید و فرم سفارش</small></a>
+    <a class="guide-card" href="sellers.html">فروشندگان<small>لیست فروشگاه‌ها و پروفایل فروشنده</small></a>
+    <a class="guide-card" href="articles.html">مجله تمساح<small>مقالات آموزشی و صفحه جزئیات مقاله</small></a>
+    <a class="guide-card" href="about.html">درباره ما و تماس<small>صفحات معرفی، تماس با ما و پشتیبانی</small></a>
+    <a class="guide-card" href="login.html">ورود و ثبت‌نام<small>صفحات احراز هویت اختصاصی</small></a>
+  </section>
+
+  <h2 class="guide-sec-title">سامانه خریدار</h2>
+  <section class="guide-grid">
+    <a class="guide-card" href="account.html">داشبورد خریدار<small>آمار، سفارش‌ها و کارت دعوت به فروشندگی</small></a>
+    <a class="guide-card" href="downloads.html">دانلودهای من</a>
+    <a class="guide-card" href="wishlist.html">علاقه‌مندی‌ها<small>هماهنگ با کلیک قلب در کل سایت</small></a>
+    <a class="guide-card" href="orders.html">مالی و سفارش‌ها</a>
+    <a class="guide-card" href="licenses.html">لایسنس‌های من</a>
+    <a class="guide-card" href="customer-club.html">باشگاه مشتریان</a>
+    <a class="guide-card" href="tickets.html">تیکت‌ها و مشاهده تیکت</a>
+    <a class="guide-card" href="ticket-new.html">ثبت تیکت جدید</a>
+    <a class="guide-card" href="settings.html">ویرایش پروفایل</a>
+    <a class="guide-card" href="announcements.html">اعلانات خریدار</a>
+  </section>
+
+  <h2 class="guide-sec-title">سامانه توسعه‌دهنده (فروشنده)</h2>
+  <section class="guide-grid">
+    <a class="guide-card" href="vendor.html">داشبورد فروشنده</a>
+    <a class="guide-card" href="vendor-products.html">مدیریت محصولات</a>
+    <a class="guide-card" href="vendor-product-drafts.html">پیش‌نویس‌های محصولات</a>
+    <a class="guide-card" href="vendor-new-product.html">ایجاد محصول جدید</a>
+    <a class="guide-card" href="vendor-edit-product.html?id=1">ویرایش محصول</a>
+    <a class="guide-card" href="vendor-finance.html">گزارش مالی و خروجی CSV</a>
+    <a class="guide-card" href="vendor-support-report.html">گزارش پشتیبانی</a>
+    <a class="guide-card" href="withdrawals.html">تسویه‌های فروشنده</a>
+    <a class="guide-card" href="vendor-tickets.html">تیکت‌های فروشنده</a>
+    <a class="guide-card" href="vendor-ready-replies.html">پاسخ‌های آماده</a>
+    <a class="guide-card" href="vendor-questions.html">پرسش‌های محصولات</a>
+    <a class="guide-card" href="vendor-reviews.html">دیدگاه‌های محصولات</a>
+    <a class="guide-card" href="vendor-support-announcements.html">اطلاعیه‌های پشتیبانی</a>
+    <a class="guide-card" href="vendor-store-settings.html">تنظیمات فروشگاه</a>
+    <a class="guide-card" href="vendor-verify.html">تأیید حساب کاربری</a>
+  </section>
+
+  <section class="guide-onboard">
+    <h2>مسیر درخواست فروشندگی جدید</h2>
+    <p>فرایند پنج‌مرحله‌ای، کد تأیید آزمایشی ۱۲۳۴۵۶، مدارک هویتی، حساب بانکی، فروشگاه و تغییر وضعیت بررسی</p>
+    <div class="guide-onboard-actions">
+      <a class="btn-primary" href="seller-application.html">شروع درخواست فروشندگی</a>
+      <a class="btn-outline" href="seller-application-status.html">آزمایش صفحه وضعیت</a>
+    </div>
+  </section>
+
+  <p style="margin-top:34px;color:#8998a7;font-size:12px">TEMSAH.ME · نسخه HTML یکپارچه</p>
+</div>
+<div class="toast" id="toast" role="status"></div>
+</body>
+</html>

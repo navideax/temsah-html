@@ -89,3 +89,11 @@
 .onboard-phone-badge{display:inline-block;background:#f2f8f5;color:#196d4c;padding:8px 12px;border-radius:8px;font-size:12px}
 @media(max-width:1050px){.onboard-step div:last-child small{display:none}.onboard-step:not(:last-child):after{display:none}.seller-convert{flex-wrap:wrap}}
 @media(max-width:700px){.onboard-stepper{padding:13px 6px;gap:2px}.onboard-step{flex-direction:column;text-align:center;gap:5px}.onboard-step-num{width:32px;height:32px}.onboard-step div:last-child b{font-size:9px}.onboard-fields,.onboard-review,.onboard-status-steps{grid-template-columns:1fr}.onboard-body{padding:16px}.onboard-actions{padding:15px}.onboard-agreement{height:250px;padding:16px}.onboard-status-panel{padding:30px 18px}.onboard-status-meta{flex-wrap:wrap}.onboard-phone-row{flex-direction:column;align-items:stretch}.onboard-phone-row button{width:100%}.seller-convert{padding:18px}.seller-convert>.btn{width:100%;justify-content:center}}
+.onboard-step-panel[hidden]{display:none!important}
+.onboard .btn,.seller-convert .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:41px;background:#17684f;color:#fff;border:1px solid #17684f;padding:9px 18px;border-radius:8px;font-weight:800;font-size:12px;white-space:nowrap;text-decoration:none;cursor:pointer;transition:background .16s,border-color .16s}
+.onboard .btn:hover,.seller-convert .btn:hover{background:#10533f;border-color:#10533f}
+.onboard .btn .ico,.seller-convert .btn .ico{width:16px;height:16px;filter:brightness(0) invert(1);opacity:1}
+.onboard .btn.soft,.seller-convert .btn.soft{background:#fff;color:#4f6175;border-color:#dce4ec}
+.onboard .btn.soft:hover,.seller-convert .btn.soft:hover{border-color:#96bbab;color:#17684f}
+.onboard .btn.soft .ico,.seller-convert .btn.soft .ico{filter:none;opacity:.75}
+

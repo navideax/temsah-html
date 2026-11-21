@@ -270,3 +270,22 @@
 @media(max-width:1080px){.article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v28-compact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.v28-developer-card{grid-template-columns:1fr}.v28-developer-info{padding:22px}.v28-developer-products{padding:14px}.v28-compact-grid{grid-template-columns:1fr}.v28-compact-thumb{width:60px;height:60px}}
 @media(max-width:480px){.article-grid{gap:10px}.article-card>div:last-child{padding:11px}.article-card h3{font-size:12px}.article-card p{font-size:11px}.v28-developer-heading h3{font-size:17px}}
+
+/* V32 visual polish & vendor dark sidebar cascade fixes */
+.is-vendor-portal .portal-links .ico,.is-vendor-portal .portal-side-bottom .ico,.is-vendor-portal .portal-avatar .ico{filter:brightness(0) invert(1);opacity:.78}
+.is-vendor-portal .portal-group-title{color:#cad6dc}
+.is-vendor-portal .portal-group-toggle{color:#9cb0bd}
+.is-vendor-portal .portal-links>a:hover,.is-vendor-portal .portal-group-title:hover{background:#263949;color:#eef6f9}
+.is-vendor-portal .portal-nav-group.open .portal-group-title{background:#243646;color:#fff}
+.is-vendor-portal .portal-links>a.selected,.is-vendor-portal .portal-group-title.selected{background:#2b4b49;color:#d8f6df}
+.is-vendor-portal .portal-links>a.selected .ico,.is-vendor-portal .portal-group-title.selected .ico{filter:invert(85%) sepia(15%) saturate(464%) hue-rotate(82deg);opacity:1}
+.is-vendor-portal .portal-sub-links a{color:#a9bac4;border-right-color:#344859}
+.is-vendor-portal .portal-sub-links a:hover{background:#263949;color:#eef6f9;border-right-color:#5b8c7c}
+.is-vendor-portal .portal-sub-links a.selected{background:#2b4b49;color:#d8f6df;border-right-color:#53c394;font-weight:800}
+@media(max-width:800px){.portal-sidebar{z-index:45}}
+.wishlist-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1100px){.wishlist-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.wishlist-grid{grid-template-columns:1fr}}
+.card-content,.card-price{min-width:0}
+.card-price>div{min-width:0}
+
