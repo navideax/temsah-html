@@ -1,0 +1,24 @@
+/* V30 utility behavior; does not replace the approved V29 design. */
+[hidden]{display:none!important}
+.tm-static-search-overlay{position:fixed;inset:0;z-index:99999;display:grid;place-items:start center;padding:8vh 16px 24px}
+.tm-static-search-shade{position:absolute;inset:0;border:0;background:#101d1bc0;cursor:pointer}
+.tm-static-search-panel{position:relative;width:min(650px,100%);max-height:83vh;overflow:auto;border:1px solid #e3ebe7;border-radius:20px;background:#fff;padding:23px;box-shadow:0 20px 65px #17241e33;direction:rtl}
+.tm-static-search-panel h2{font-size:21px;margin:0 0 18px}.tm-static-search-close{position:absolute;left:16px;top:16px;border:0;background:#eff4f1;border-radius:8px;padding:8px;cursor:pointer}.tm-static-search-close img{width:18px;height:18px}
+#tmStaticSearchForm{display:flex;gap:9px;margin-bottom:14px}#tmStaticSearchInput{flex:1;min-width:0;border:1px solid #dce6e1;border-radius:10px;padding:12px;font:inherit}#tmStaticSearchForm button{border:0;background:#17684f;color:#fff;border-radius:10px;padding:10px 18px;font:inherit;cursor:pointer}
+.tm-static-search-results{display:grid;gap:6px}.tm-search-result{border:1px solid #edf2ef;text-decoration:none;color:#263e34;border-radius:10px;padding:10px 13px;display:flex;align-items:center;justify-content:space-between;gap:15px}.tm-search-result:hover{border-color:#1a795b;background:#f7fbf9}.tm-search-result small{color:#697b72;white-space:nowrap}
+@media(max-width:500px){.tm-static-search-panel{padding:17px}.tm-search-result{align-items:start;flex-direction:column}}
+.tm-reply-inline{display:grid;gap:10px;margin-top:12px;padding:14px;background:#f8fafc;border:1px solid #e6ecf2;border-radius:10px}
+.tm-reply-inline input,.tm-reply-inline textarea{width:100%;border:1px solid #dbe3ea;border-radius:8px;padding:10px 12px;background:#fff;font:inherit;font-size:12px;color:#273549}
+.tm-reply-inline textarea{min-height:85px;resize:vertical}
+.tm-reply-inline-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tm-empty-box{background:#fff;border:1px dashed #d5e0e6;border-radius:14px;padding:38px 20px;text-align:center;color:#7a8896;display:grid;gap:10px;justify-items:center;margin-top:12px}
+.tm-empty-box .ico{width:38px;height:38px;opacity:.55}
+.tm-empty-box h3{margin:0;font-size:16px;color:#2c3d51}
+.tm-empty-box p{margin:0;font-size:12px;max-width:420px}
+.v10-chip{cursor:pointer;transition:background .15s,border-color .15s}
+.v10-chip:hover{border-color:#d8b780}
+.v11-editor-bar span{cursor:pointer;transition:background .15s,border-color .15s}
+.v11-editor-bar span:hover{background:#edf5f1;border-color:#a5cbb9;color:#17684f}
+.v11-product-actions .v11-btn{cursor:pointer}
+.tm-coupon-applied{display:inline-flex;align-items:center;gap:6px;background:#e8f6ed;color:#1b744d;border:1px solid #ccebd8;border-radius:7px;padding:5px 10px;font-size:11px;font-weight:750;margin-top:8px}
+

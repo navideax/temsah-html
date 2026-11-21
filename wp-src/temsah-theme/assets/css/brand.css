@@ -1,0 +1,6 @@
+/* TEMSAH identity: supplied official brand mark, never substitute a glyph. */
+.logo .tm-brand-icon{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;vertical-align:middle;overflow:visible!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;color:inherit!important;}
+.logo .tm-brand-icon::before,.logo .tm-brand-icon::after{content:none!important;display:none!important}
+.logo .tm-brand-icon img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;max-width:none!important;filter:none!important;opacity:1!important}
+.logo .logo-symbol.tm-brand-icon,.logo .logo-mark.tm-brand-icon{width:44px!important;height:44px!important}
+@media(max-width:600px){.logo .logo-symbol.tm-brand-icon,.logo .logo-mark.tm-brand-icon{width:37px!important;height:37px!important}}

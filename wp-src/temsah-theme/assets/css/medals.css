@@ -1,0 +1,104 @@
+/* TEMSAH achievements — tooltip edition, only Iconly pack icons. */
+.tm-medal-region{display:flex;flex-direction:column;gap:6px;min-width:0}
+.tm-medals{display:flex;align-items:flex-start;flex-wrap:wrap;gap:10px;direction:rtl}
+.tm-medal{--tmA:#657085;--tmB:#a1aaba;--tmBg:#f4f5f8;appearance:none;border:0!important;background:none!important;display:flex;align-items:center;flex-direction:column;gap:5px;padding:0!important;cursor:pointer;position:relative;box-shadow:none!important;transition:transform .18s ease,filter .18s ease;line-height:1.3;color:var(--tmA)!important;font-family:inherit;flex-shrink:0}
+.tm-medal:hover,.tm-medal:focus-visible{transform:translateY(-3px)}
+.tm-medal:focus-visible{outline:2px solid #237754!important;outline-offset:4px}
+.tm-medal-body{display:grid;place-items:center;position:relative;isolation:isolate;filter:drop-shadow(0 6px 12px #00000018);background:linear-gradient(145deg,var(--tmB),var(--tmA))}
+.tm-medal-body img{filter:brightness(0) invert(1);opacity:.98}
+.tm-medal-title{font-size:10px;font-weight:800;text-align:center;white-space:nowrap;color:#465267}
+.tm-medal.slate{--tmA:#8590a2;--tmB:#bdc4d0}
+.tm-medal.blue{--tmA:#4859d5;--tmB:#8495ff}
+.tm-medal.pink{--tmA:#c146b2;--tmB:#ef87d7}
+.tm-medal.violet{--tmA:#6551d4;--tmB:#a397fa}
+.tm-medal.green{--tmA:#48a26d;--tmB:#83dca5}
+.tm-medal.gold{--tmA:#ee9b23;--tmB:#ffd070}
+.tm-medal.coral{--tmA:#e36b53;--tmB:#ffb490}
+.tm-medal.is-locked{filter:grayscale(.18) saturate(.75);opacity:.62}
+.tm-badges-caption{color:#39465b;font-size:12px;font-weight:750;margin:3px 0 0}
+.tm-badges-caption span{color:#8b95a4;font-weight:400}
+.tm-subsection-title{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;color:#475366;margin-bottom:12px}
+.tm-subsection-title img{width:17px;height:17px;opacity:.7}
+.tm-seller-achievements{border-radius:12px;border:1px solid #e9edef;background:#fff;padding:17px 20px;margin-top:12px}
+.vendor-head{flex-wrap:wrap;position:relative}
+/* Defensive: older injected badge markup is never shown inside cards. */
+.product-card .tm-medal-region,.productcard .tm-medal-region,.seller-tile .tm-medal-region,.vendor-small .tm-medal-region,.buy-box .tm-medal-region{display:none!important}
+
+/* Product medals: circular, compact, inline under seller info */
+.tm-product-inline{margin:9px 0 1px;padding:0;max-width:310px}
+.tm-product-inline .tm-medal-region{margin:0;padding:0;border:0}
+.tm-product-inline .tm-medals{gap:8px;align-items:center;justify-content:flex-start;flex-wrap:nowrap}
+.tm-product-inline .tm-medal{width:38px;min-width:38px;gap:0}
+.tm-product-inline .tm-medal-body{width:38px;height:38px;border-radius:50%;box-shadow:inset 0 0 0 2px #ffffffb3,0 8px 18px #13233d1a}
+.tm-product-inline .tm-medal-body:before{content:"";position:absolute;inset:4px;border-radius:50%;background:linear-gradient(180deg,#ffffff4f,#ffffff08)}
+.tm-product-inline .tm-medal-body img{width:17px!important;height:17px!important}
+.tm-product-inline .tm-medal-title,.tm-product-inline .tm-medal-legs{display:none!important}
+.tm-product-inline .tm-medal.is-locked .tm-medal-body{background:linear-gradient(145deg,#b8c1cd,#8f98a7)}
+
+/* Seller medals: more premium and aligned */
+.tm-seller-hero-medals{margin-right:auto;align-self:center;min-width:280px;max-width:54%;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.tm-seller-medals-heading{display:block;font-size:11px;font-weight:800;margin-bottom:12px;color:inherit}
+.tm-seller-hero-medals .tm-medals{display:grid;grid-template-columns:repeat(4,minmax(48px,1fr));gap:12px 10px;align-items:start}
+.tm-seller-hero-medals .tm-medal{width:100%;align-items:center;gap:6px}
+.tm-seller-hero-medals .tm-medal-body{width:46px;height:54px;clip-path:polygon(20% 0,80% 0,100% 20%,100% 72%,50% 100%,0 72%,0 20%);box-shadow:inset 0 0 0 2px #ffffff4a,0 10px 20px #13233d1c}
+.tm-seller-hero-medals .tm-medal-body:before{content:"";position:absolute;inset:4px;clip-path:inherit;background:linear-gradient(180deg,#ffffff59,#ffffff08)}
+.tm-seller-hero-medals .tm-medal-body img{width:19px!important;height:19px!important}
+.tm-seller-hero-medals .tm-medal-title{font-size:9px;line-height:1.45;white-space:normal;max-width:56px;color:inherit}
+.tm-seller-hero-medals .tm-medal.is-locked .tm-medal-body{background:linear-gradient(145deg,#c3cad4,#98a2b1)}
+
+/* Premium tooltip */
+.tm-medal-tooltip[hidden]{display:none!important}
+.tm-medal-tooltip{position:fixed;z-index:999999;pointer-events:none;width:min(320px,calc(100vw - 20px));background:#fff;border:1px solid #e7ebf1;border-radius:16px;box-shadow:0 18px 60px #06101f26;padding:14px 14px 12px;color:#223047;text-align:right;direction:rtl;transform-origin:top center;animation:tm-tip-rise .14s ease-out}
+.tm-medal-tooltip:after{content:"";position:absolute;left:50%;transform:translateX(-50%);top:100%;border:8px solid transparent;border-top-color:#fff;filter:drop-shadow(0 2px 1px #dbe2eb)}
+.tm-medal-tooltip[data-side="bottom"]:after{top:auto;bottom:100%;border-top-color:transparent;border-bottom-color:#fff}
+.tm-tip-head{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+.tm-tip-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:0 0 42px;background:linear-gradient(145deg,var(--tmTipB,#cbd3de),var(--tmTipA,#8a94a3));box-shadow:inset 0 0 0 2px #ffffff88}
+.tm-tip-icon img{width:18px;height:18px;filter:brightness(0) invert(1)}
+.tm-tip-icon.is-seller{border-radius:14px;clip-path:polygon(20% 0,80% 0,100% 20%,100% 72%,50% 100%,0 72%,0 20%)}
+.tm-tip-head h4{margin:0;font-size:13px;font-weight:900;color:#1e293b}
+.tm-tip-head p{margin:3px 0 0;font-size:11px;color:#7f8a9b}
+.tm-tip-state{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border-radius:999px;font-size:10px;font-weight:800;margin-inline-start:auto}
+.tm-tip-state.yes{background:#e9f7ef;color:#188454}
+.tm-tip-state.no{background:#f1f4f7;color:#8490a2}
+.tm-tip-state img{width:13px;height:13px}
+.tm-tip-desc{font-size:12px;line-height:1.9;color:#566375;margin:0 0 10px}
+.tm-tip-grid{display:grid;grid-template-columns:1fr;gap:8px}
+.tm-tip-item{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;background:#f7f9fb;border:1px solid #edf1f5;border-radius:10px;padding:8px 10px;font-size:11px}
+.tm-tip-item span{color:#8591a3}
+.tm-tip-item b{color:#334155;text-align:left;font-weight:800}
+.tm-tip-progress{margin-top:10px}
+.tm-tip-progress-head{display:flex;justify-content:space-between;font-size:11px;font-weight:800;color:#566375;margin-bottom:6px}
+.tm-tip-track{height:6px;border-radius:999px;overflow:hidden;background:#edf0f5}
+.tm-tip-track i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#29b47b,#168a60)}
+.tm-tip-note{margin-top:9px;font-size:10px;line-height:1.8;color:#8b95a4}
+@keyframes tm-tip-rise{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+@media(max-width:760px){
+  .tm-seller-hero-medals{min-width:0;max-width:100%;width:100%;margin-right:0}
+  .tm-seller-hero-medals .tm-medals{grid-template-columns:repeat(4,minmax(44px,1fr));gap:10px 8px}
+  .tm-product-inline{max-width:100%}
+  .tm-medal-tooltip{width:min(280px,calc(100vw - 16px));padding:12px 12px 10px}
+}
+
+/* V19: small, text-only tooltip for medals; full seller summary only on hero seller name */
+.tm-medal-tooltip:not(.tm-tooltip-dev){width:max-content;max-width:190px;padding:9px 13px;border-radius:9px;box-shadow:0 8px 28px #06101f20;text-align:center}
+.tm-tip-label{font-size:12px;line-height:1.55;font-weight:850;white-space:nowrap;color:#2d384b}
+.tm-medal-tooltip.tm-tooltip-dev{width:min(325px,calc(100vw - 18px));padding:17px 17px 13px;border-radius:16px;text-align:right}
+.tm-dev-tip-head{display:flex;gap:10px;align-items:center;padding-bottom:12px;border-bottom:1px solid #eef0f4}
+.tm-dev-tip-avatar{width:41px;height:41px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#239f72,#12684e);color:white;font-size:16px;font-weight:900}
+.tm-dev-tip-head>div{flex:1;min-width:0}
+.tm-dev-tip-head strong{display:block;font-size:13px;color:#1c293a;line-height:1.8}
+.tm-dev-tip-head small{font-size:10px;color:#8390a2}
+.tm-dev-tip-check img{width:18px;height:18px}
+.tm-dev-tip-stats{display:grid;grid-template-columns:repeat(3,1fr);padding:14px 0;gap:6px}
+.tm-dev-tip-stats>div{display:flex;flex-direction:column;gap:4px;align-items:center;border-left:1px solid #edf0f4}
+.tm-dev-tip-stats>div:last-child{border-left:0}
+.tm-dev-tip-stats strong{font-size:16px;color:#233147}
+.tm-dev-tip-stats small{font-size:10px;color:#8390a2}
+.tm-dev-tip-title{font-size:11px;font-weight:850;color:#435165;margin:2px 0 10px}
+.tm-dev-tip-medals{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.tm-dev-tip-medal{width:31px;height:35px;display:grid;place-items:center;clip-path:polygon(18% 0,82% 0,100% 18%,100% 72%,50% 100%,0 72%,0 18%);background:linear-gradient(140deg,var(--tmBadgeB),var(--tmBadgeA));filter:drop-shadow(0 2px 4px #0002)}
+.tm-dev-tip-medal img{width:16px;height:16px;filter:brightness(0) invert(1)}
+.tm-dev-tip-medal.locked{filter:grayscale(1);opacity:.34}
+.tm-dev-tip-footer{font-size:10px;line-height:1.7;color:#8190a3;margin-top:12px;padding-top:10px;border-top:1px solid #edf0f4}
+.product-summary .summary-seller [data-tm-seller-hover]{text-decoration:underline;text-decoration-color:#9ccab5;text-underline-offset:4px;text-decoration-style:dotted}
