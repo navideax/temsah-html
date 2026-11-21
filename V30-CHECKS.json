@@ -1,0 +1,8 @@
+{
+  "html_pages": 79,
+  "local_refs_checked": 6030,
+  "missing_refs": [],
+  "static_content_errors": [],
+  "runtime_test": "7 key pages passed JS interaction smoke checks",
+  "js_data_arrays": "main app.js and modern.js removed"
+}

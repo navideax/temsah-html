@@ -1,0 +1,42 @@
+/* TEMSAH home carousels | RTL, scroll snap, local illustration stories */
+.ts-section-head{align-items:center}
+.ts-slider-head-actions{display:flex;align-items:center;gap:17px}
+.ts-slider-controls{display:flex;align-items:center;gap:7px;flex-shrink:0}
+.ts-slider-arrow{width:34px;height:34px;display:grid;place-items:center;background:#fff;border:1px solid #e4eae7;border-radius:9px;transition:all .18s;cursor:pointer}
+.ts-slider-arrow:hover:not(:disabled){background:#17684f;border-color:#17684f;transform:translateY(-1px)}
+.ts-slider-arrow:hover:not(:disabled) img{filter:brightness(0) invert(1);opacity:1}
+.ts-slider-arrow .ico{width:17px;height:17px}
+.ts-slider-arrow:disabled{opacity:.3;cursor:not-allowed;background:#f0f3f3}
+.ts-slider-arrow:focus-visible{outline:2px solid #217f5b;outline-offset:3px}
+.ts-slider-viewport{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;outline:none;padding:3px 1px 19px;margin-bottom:-19px}
+.ts-slider-viewport::-webkit-scrollbar{display:none}
+.ts-slider-viewport:focus-visible{outline:2px solid #a9c8ba;outline-offset:2px;border-radius:8px}
+.ts-slider-track{display:flex;align-items:stretch;gap:17px;min-width:max-content;padding-bottom:5px}
+.ts-slider-track>.product-card{width:calc((min(1240px,100vw - 44px) - 3 * 17px)/4);min-width:245px;max-width:320px;flex:0 0 auto;scroll-snap-align:start;scroll-snap-stop:always}
+.ts-slider-dots{display:flex;justify-content:center;align-items:center;gap:6px;min-height:18px;margin-top:17px;direction:rtl}
+.ts-slider-dots button{width:6px;height:6px;padding:0;border:0;border-radius:999px;background:#cfd9d3;transition:width .2s,background .2s}
+.ts-slider-dots button[aria-current="true"]{width:23px;background:#237f5e}
+.ts-slider-dots button:focus-visible{outline:2px solid #17684f;outline-offset:3px}
+.ts-stories-section{margin:6px auto 56px}
+.ts-stories-section .section-head{margin-bottom:18px}
+.ts-story-track{gap:15px}
+.ts-story{width:212px;aspect-ratio:9/16;position:relative;flex:0 0 auto;display:block;overflow:hidden;border-radius:16px;background:#172d41;scroll-snap-align:start;scroll-snap-stop:always;border:1px solid #e6ebeb;box-shadow:0 8px 20px #2539410c;transition:box-shadow .2s,transform .2s}
+.ts-story:hover{transform:translateY(-4px);box-shadow:0 18px 35px #13283826}
+.ts-story>img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.ts-story:hover>img{transform:scale(1.05)}
+.ts-story-shade{position:absolute;inset:0;background:linear-gradient(180deg,#0c1a2907 0%,transparent 25%,#0b1b30b0 76%,#091729e8 100%)}
+.ts-story-content{position:absolute;inset:auto 17px 17px 17px;display:flex;flex-direction:column;align-items:flex-start;gap:5px;color:#fff;text-shadow:0 2px 7px #0c1d3255;line-height:1.5}
+.ts-story-content small{font-size:10px;font-weight:750;color:#bdeeda;background:#ffffff24;border:1px solid #ffffff30;border-radius:5px;padding:3px 8px;margin-bottom:3px}
+.ts-story-content strong{font-size:18px;font-weight:950;line-height:1.55}
+.ts-story-content>span:not(.ts-story-link){font-size:11px;color:#ebf4f5}
+.ts-story-link{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:800;margin-top:10px;color:#dcffeb}
+.ts-story-link .ico{width:15px;height:15px;filter:brightness(0) invert(1);opacity:1}
+.ts-story-index{position:absolute;top:14px;left:14px;color:#fff;font-size:12px;font-weight:800;background:#14243b5e;padding:3px 8px;border:1px solid #ffffff55;border-radius:7px}
+.ts-stories-section .ts-slider-dots{margin-top:13px}
+@media(max-width:1050px){.ts-slider-track>.product-card{width:calc((100vw - 44px - 34px)/3);min-width:220px}.ts-story{width:190px}}
+@media(max-width:740px){.ts-slider-track>.product-card{width:calc((100vw - 44px - 15px)/2);min-width:0}.ts-story{width:174px}.ts-slider-head-actions{gap:10px}.ts-slider-arrow{width:31px;height:31px}.ts-section-head h2{font-size:19px}.ts-section-head p{font-size:11px}.ts-slider-track{gap:12px}.ts-story-track{gap:11px}}
+@media(max-width:480px){.ts-slider-track>.product-card{width:min(75vw,275px)}.ts-story{width:68vw;max-width:230px}.ts-section-head{align-items:flex-start}.ts-slider-head-actions .view-all{display:none}.ts-section-head h2{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.ts-slider-viewport{scroll-behavior:auto}.ts-story:hover{transform:none}.ts-story:hover>img{transform:none}}
+
+/* V21 desktop drag-to-slide (RTL) */
+@media (pointer:fine){.ts-slider-viewport{cursor:grab}.ts-slider-viewport.ts-is-dragging{cursor:grabbing;user-select:none;-webkit-user-select:none}.ts-slider-viewport.ts-is-dragging *{user-select:none!important;-webkit-user-select:none!important;pointer-events:none!important}}

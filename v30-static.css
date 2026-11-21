@@ -1,0 +1,9 @@
+/* V30 utility behavior; does not replace the approved V29 design. */
+[hidden]{display:none!important}
+.tm-static-search-overlay{position:fixed;inset:0;z-index:99999;display:grid;place-items:start center;padding:8vh 16px 24px}
+.tm-static-search-shade{position:absolute;inset:0;border:0;background:#101d1bc0;cursor:pointer}
+.tm-static-search-panel{position:relative;width:min(650px,100%);max-height:83vh;overflow:auto;border:1px solid #e3ebe7;border-radius:20px;background:#fff;padding:23px;box-shadow:0 20px 65px #17241e33;direction:rtl}
+.tm-static-search-panel h2{font-size:21px;margin:0 0 18px}.tm-static-search-close{position:absolute;left:16px;top:16px;border:0;background:#eff4f1;border-radius:8px;padding:8px;cursor:pointer}.tm-static-search-close img{width:18px;height:18px}
+#tmStaticSearchForm{display:flex;gap:9px;margin-bottom:14px}#tmStaticSearchInput{flex:1;min-width:0;border:1px solid #dce6e1;border-radius:10px;padding:12px;font:inherit}#tmStaticSearchForm button{border:0;background:#17684f;color:#fff;border-radius:10px;padding:10px 18px;font:inherit;cursor:pointer}
+.tm-static-search-results{display:grid;gap:6px}.tm-search-result{border:1px solid #edf2ef;text-decoration:none;color:#263e34;border-radius:10px;padding:10px 13px;display:flex;align-items:center;justify-content:space-between;gap:15px}.tm-search-result:hover{border-color:#1a795b;background:#f7fbf9}.tm-search-result small{color:#697b72;white-space:nowrap}
+@media(max-width:500px){.tm-static-search-panel{padding:17px}.tm-search-result{align-items:start;flex-direction:column}}
